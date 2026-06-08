@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexoria AI Technologies builds intelligent, high-conversion websites and AI automation solutions for local businesses in South Africa. Professional setups from R2,500." />
+  <meta name="theme-color" content="#03000a" />
+  <title>Nexoria AI Technologies | Intelligent Websites & AI Solutions</title>
+  <style>
+    /* Global Core & Deep Cyber Noir Theme */
+    :root {
+      --bg: #030007;
+      --panel: rgba(9, 5, 22, 0.65);
+      --panel-solid: #090516;
+      --text: #f8fbff;
+      --muted: #8c86a0;
+      --blue: #00f0ff;
+      --magenta: #d946ef;
+      --violet: #8b5cf6;
+      --cyan: #00ffcc;
+      --gold: #fbbf24;
+      --green: #22c55e;
+      --line: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(139, 92, 246, 0.15);
+      --neon-glow: 0 0 25px rgba(0, 240, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background: var(--bg);
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; border-radius: 16px; }
+    .wrap { max-width: 1240px; margin: auto; padding: 0 24px; position: relative; z-index: 2; }
+
+    /* Moving Ambient Nebulas & Cinematic Glows */
+    .glow-universe {
+      position: fixed;
+      inset: -50%;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.15), transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(0, 240, 255, 0.12), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(217, 70, 239, 0.08), transparent 40%);
+      animation: spaceDrift 40s infinite alternate ease-in-out;
+    }
+    @keyframes spaceDrift {
+      0% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(3deg) scale(1.08); }
+    }
+
+    /* Top Global Notice Strip */
+    .topbar {
+      background: linear-gradient(90deg, rgba(0, 240, 255, 0.08), rgba(217, 70, 239, 0.08));
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      color: #cbd5e1;
+      backdrop-filter: blur(10px);
+    }
+    .topbar .wrap { display: flex; justify-content: center; padding: 10px 0; text-align: center; font-weight: 600; letter-spacing: 0.5px; }
+
+    /* Ultra-Glass Header Navigation matching reference image layout */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(3, 0, 7, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; padding-bottom: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: #fff; }
+    .mark { width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, var(--blue), var(--magenta)); display: grid; place-items: center; box-shadow: var(--neon-glow); font-size: 18px; font-weight: 900; }
+    
+    .navlinks { display: flex; gap: 32px; color: #cbd5e1; font-size: 14px; font-weight: 500; }
+    .navlinks a { transition: 0.3s; position: relative; padding: 4px 0; }
+    .navlinks a:hover { color: #fff; }
+    .navlinks a.active-link::after {
+      content: '';
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--magenta);
+      box-shadow: 0 0 10px var(--magenta);
+    }
+
+    /* Fixed Conversion Elements */
+    .sticky-wa {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 110;
+      background: linear-gradient(135deg, #22c55e, #00ffcc);
+      color: #030007;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .sticky-wa:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(34, 197, 94, 0.5);
+    }
+
+    /* Functional Interactive UI Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      background: linear-gradient(90deg, #581cff, #aa1fff);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(170, 31, 255, 0.4);
+    }
+    .btn.alt { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; }
+    .btn.alt:hover { background: rgba(255, 255, 255, 0.05); border-color: #fff; box-shadow: none; }
+    .btn.green { background: linear-gradient(90deg, #22c55e, #00ffcc); color: #030007; }
+    .btn.green:hover { box-shadow: 0 10px 25px rgba(0, 255, 204, 0.4); }
+    .btn.gold { background: linear-gradient(90deg, #f59e0b, #d97706); color: #fff; }
+
+    /* Epic Hero Cyber Section */
+    .hero {
+      padding: 90px 0 70px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      background: rgba(0, 240, 255, 0.06);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 999px;
+      color: #9effff;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .badge span { color: var(--magenta); font-weight: 700; }
+    
+    h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, #00f0ff, #d946ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      font-weight: 400;
+      max-width: 620px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
+
+    /* Reference Dashboard Horizontal Matrix */
+    .hero-stats-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: rgba(9, 5, 22, 0.4);
+      backdrop-filter: blur(10px);
+    }
+    .hero-stat-box {
+      padding: 20px;
+      background: rgba(6, 3, 16, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .hero-stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      color: var(--blue);
+    }
+    .hero-stat-info span { font-size: 12px; color: var(--muted); display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero-stat-info strong { font-size: 22px; color: #fff; font-weight: 800; display: block; line-height: 1.2; }
+
+    /* Cybernetic Image Frame Engine */
+    .hero-graphic-frame {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cyber-android-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      background: radial-gradient(circle at 30% 30%, #170d3a 0%, #05020f 80%);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Cyber Abstract Vector Shapes matching Image Profile layout */
+    .vector-grid-glow {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.6;
+    }
+    .vector-ring-outer {
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      border: 2px dashed rgba(0, 240, 255, 0.25);
+      position: relative;
+      animation: rotatingRing 25s linear infinite;
+    }
+    .vector-ring-inner {
+      position: absolute;
+      top: 10%; left: 10%; right: 10%; bottom: 10%;
+      border-radius: 50%;
+      border: 1px solid rgba(217, 70, 239, 0.3);
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    }
+    @keyframes rotatingRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Subtle neon glowing orb effect behind graphic */
+    .glow-overlay-art {
+      position: absolute;
+      width: 130%;
+      height: 130%;
+      background: radial-gradient(circle, rgba(217, 70, 239, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Global Section Architecture */
+    .section { padding: 90px 0; position: relative; }
+    .section-head { text-align: center; max-width: 700px; margin: 0 auto 55px; }
+    .section-head h2 { font-size: 38px; font-weight: 800; color: #fff; letter-spacing: -1px; margin-bottom: 14px; }
+    .section-head .headline-bar { width: 60px; height: 3px; background: linear-gradient(90deg, var(--blue), var(--magenta)); margin: 0 auto 16px; border-radius: 99px; }
+    
+    /* Interactive Cards Matrix config matching reference footer boxes */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .showcase-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    
+    .panel-card {
+      background: rgba(13, 9, 29, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .panel-card:hover {
+      border-color: rgba(139, 92, 246, 0.3);
+      background: rgba(15, 10, 34, 0.7);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+    .panel-card .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(139, 92, 246, 0.15);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .panel-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+    .panel-card p { font-size: 14px; color: var(--muted); }
+
+    /* Luxury Hologram Pricing Architecture */
+    .price-matrix { font-size: 44px; font-weight: 800; color: #fff; margin: 18px 0; }
+    .list-specs { list-style: none; margin-top: 20px; }
+    .list-specs li { padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.04); color: #cbd5e1; font-size: 14px; }
+    
+    .panel-card.premium-glow {
+      border-color: rgba(0, 240, 255, 0.25);
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.05);
+    }
+    .panel-card.premium-glow:hover {
+      border-color: var(--blue);
+      box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+    }
+    .card-tag {
+      display: inline-block;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    /* Live Previews Interactive Framework Engine */
+    .demo-selector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+    .tab-trigger {
+      padding: 12px 24px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab-trigger:hover, .tab-trigger.active {
+      color: #fff;
+      background: rgba(139, 92, 246, 0.15);
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+    
+    .demo-viewport-box {
+      display: none;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #090615;
+    }
+    .demo-viewport-box.active { display: block; }
+
+    /* Demo Client Profiles Scope Style System */
+    .demo-padding { padding: 40px; text-align: left; }
+    .demo-banner { padding: 50px 30px; border-radius: 14px; margin-bottom: 30px; }
+    
+    .barber-blueprint { background: #0c0a12; color: #f3f4f6; }
+    .barber-banner { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(28,15,69,0.5)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80') center/cover; }
+    .restaurant-blueprint { background: #120905; color: #fff7ed; }
+    .restaurant-banner { background: linear-gradient(135deg, rgba(20,9,4,0.9), rgba(99,41,10,0.4)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover; }
+    .fitness-blueprint { background: #040d08; color: #f0fdf4; }
+    .fitness-banner { background: linear-gradient(135deg, rgba(3,13,6,0.9), rgba(11,69,32,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80') center/cover; }
+
+    .demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .demo-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; }
+    .demo-media-slot { height: 160px; border-radius: 8px; background-size: cover; background-position: center; margin-bottom: 12px; }
+
+    /* Flow Layout and Process Engine */
+    .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .process-pipeline { display: flex; flex-direction: column; gap: 16px; }
+    .pipeline-step { display: flex; gap: 20px; padding: 20px; border: 1px solid var(--line); background: rgba(255,255,255,0.01); border-radius: 16px; }
+    .pipeline-step::before { content: attr(data-step); width: 36px; height: 36px; min-width: 36px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--blue), var(--magenta)); font-weight: 700; color: #fff; font-size: 15px; }
+
+    /* Interactive Drop-Down System modules */
+    .faq-container details { border: 1px solid var(--line); background: rgba(255,255,255,0.01); border-radius: 12px; padding: 18px; margin-bottom: 12px; }
+    .faq-container details[open] { border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.02); }
+    .faq-container summary { cursor: pointer; font-weight: 600; font-size: 16px; outline: none; color: #fff; }
+    .faq-container p { color: var(--muted); margin-top: 10px; font-size: 14px; }
+
+    /* High-Response Contact Portal Interface */
+    .portal-cta {
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      background: linear-gradient(135deg, rgba(16, 10, 38, 0.6), rgba(6, 3, 16, 0.9));
+      border-radius: 28px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .form-wrapper { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+    .form-group-matrix { display: grid; gap: 14px; margin-top: 16px; }
+    .form-group-matrix input, .form-group-matrix select, .form-group-matrix textarea {
+      width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(3, 1, 10, 0.6); color: white; font-size: 14px; font-family: inherit; outline: none;
+    }
+    .form-group-matrix input:focus, .form-group-matrix select:focus, .form-group-matrix textarea:focus { border-color: var(--blue); }
+    .form-group-matrix textarea { min-height: 90px; resize: vertical; }
+
+    .footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; background: #010005; }
+
+    /* Screen Breakpoint Matrix Adjustments */
+    @media (max-width: 1024px) {
+      .hero-grid, .split-layout, .portal-cta { grid-template-columns: 1fr; gap: 40px; }
+      .cards-grid, .demo-grid { grid-template-columns: repeat(2, 1fr); }
+      .showcase-row { grid-template-columns: repeat(3, 1fr); }
+      .hero-stats-panel { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 44px; }
+    }
+    @media (max-width: 768px) {
+      .cards-grid, .demo-grid, .showcase-row, .hero-stats-panel { grid-template-columns: 1fr; }
+      .navlinks { display: none; }
+      .hero { padding-top: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Space Layer -->
+  <div class="glow-universe"></div>
+
+  <!-- Realtime Conversion Fixed WhatsApp Element -->
+  <a class="sticky-wa" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20a%20website%20for%20my%20business">💬 WhatsApp for a Website</a>
+  
+  <div class="topbar">
+    <div class="wrap">Launch Offer: Get a Free Sample Homepage before you pay! Professional setups from R2,500.</div>
+  </div>
+  
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">
+        <div class="mark">N</div>
+        <span>NEXORIA</span>
+      </div>
+      <div class="navlinks">
+        <a href="#home" class="active-link">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <a class="btn" style="padding: 10px 20px; font-size: 13px;" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20to%20get%20started%20with%20a%20website">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Epic Hero Section matching reference photo layout -->
+  <header id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge">⚡ Empowering Businesses <span>With AI</span></div>
+        <h1>We Build Intelligent <br><span class="gradient-text">Websites & AI Solutions</span></h1>
+        <p class="lead">Nexoria AI Technologies helps businesses grow with modern websites, AI automation, and powerful digital solutions. We ensure customers find your services instantly, trust your brand, and message you directly.</p>
+        
+        <div class="hero-actions">
+          <a class="btn green" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20a%20free%20sample%20homepage">Our Services</a>
+          <a class="btn alt" href="#portfolio">View Portfolio</a>
+        </div>
+
+        <!-- Reference Dashboard Feature Info Blocks -->
+        <div class="hero-stats-panel">
+          <div class="hero-stat-box">
+            <div class="hero-stat-icon">🌐</div>
+            <div class="hero-stat-info"><span>Websites</span><strong>10+</strong><p style="font-size:11px; color:var(--muted);">Built</p></div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-icon">⚙️</div>
+            <div class="hero-stat-info"><span>AI Solutions</span><strong>5+</strong><p style="font-size:11px; color:var(--muted);">Delivered</p></div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-icon">👥</div>
+            <div class="hero-stat-info"><span>Happy Clients</span><strong>100%</strong><p style="font-size:11px; color:var(--muted);">Satisfaction</p></div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-icon">🚀</div>
+            <div class="hero-stat-info"><span>Support</span><strong>24/7</strong><p style="font-size:11px; color:var(--muted);">Always Available</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-graphic-frame">
+        <div class="glow-overlay-art"></div>
+        <div class="cyber-android-placeholder">
+          <div class="vector-grid-glow"></div>
+          <div class="vector-ring-outer">
+            <div class="vector-ring-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Our Services Matrix section -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="headline-bar"></div>
+        <h2>Our Services</h2>
+        <p style="color: var(--muted);">We don't build standard text blocks. We build optimized systems that prompt users to take action.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="panel-card">
+          <div class="card-icon">💻</div>
+          <h3>Website Design</h3>
+          <p>Modern, fast & responsive websites that convert visitors into active leads and customers.</p>
+        </div>
+        <div class="panel-card">
+          <div class="card-icon">💬</div>
+          <h3>AI Chatbots</h3>
+          <p>Smart AI chatbots integrated into your landing layout that engage and convert customers 24/7.</p>
+        </div>
+        <div class="panel-card">
+          <div class="card-icon">🤖</div>
+          <h3>AI Automation</h3>
+          <p>Automate repetitive operational tasks and save valuable business time with custom workflows.</p>
+        </div>
+        <div class="panel-card">
+          <div class="card-icon">📢</div>
+          <h3>Digital Marketing</h3>
+          <p>Boost your regional market brand visibility with social media integration, map routing & targeted ads.</p>
+        </div>
+        <div class="panel-card">
+          <div class="card-icon">📈</div>
+          <h3>Business Solutions</h3>
+          <p>Custom software systems, structured pricing modules, and tools tailored to scale your local storefront.</p>
+        </div>
+        <div class="panel-card">
+          <div class="card-icon">🚀</div>
+          <h3>Instant Frameworks</h3>
+          <p>Lightweight architectural profiles ensuring smooth, lightning-fast performance across all mobile networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Performance Plans Pricing Matrix -->
+  <section id="pricing" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="headline-bar"></div>
+        <h2>Symmetric Execution Packages</h2>
+        <p style="color: var(--muted);">Fair upfront pricing models designed to generate a clear return on investment for your storefront.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="panel-card">
+          <span class="card-tag">Starter Engine</span>
+          <h3>Basic Module</h3>
+          <div class="price-matrix">R2,500</div>
+          <p>Essential blueprint ideal for independent local operations seeking immediate discovery.</p>
+          <ul class="list-specs">
+            <li>Single-Page Profile Architecture</li>
+            <li>Optimized Core Services Overview</li>
+            <li>Direct WhatsApp Trigger Integration</li>
+            <li>Google Maps Location Matrix</li>
+            <li>1 Round of Architectural Adjustments</li>
+          </ul>
+          <a class="btn alt" style="width:100%; margin-top:24px;" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20the%20Basic%20Website%20Package%20for%20R2500">Deploy Basic Suite</a>
+        </div>
+
+        <div class="panel-card premium-glow">
+          <span class="card-tag" style="background:rgba(217,70,239,0.1); border-color:var(--magenta); color:var(--magenta);">Highly Recommended</span>
+          <h3>Business Growth Suite</h3>
+          <div class="price-matrix" style="color: var(--cyan);">R6,500</div>
+          <p>Complete standard deployment built to handle heavier monthly lead volumes.</p>
+          <ul class="list-specs">
+            <li>Multi-Section Spatial Home Module</li>
+            <li>Dedicated Detailed Offerings Framework</li>
+            <li>Interactive Digital Brand Profile</li>
+            <li>High-Performance Visual Portfolio Grid</li>
+            <li>2 Rounds of Complete Fine-Tuning</li>
+          </ul>
+          <a class="btn green" style="width:100%; margin-top:24px;" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20the%20Business%20Growth%20Suite%20for%20R6500">Deploy Growth Suite</a>
+        </div>
+
+        <div class="panel-card">
+          <span class="card-tag">Complete Elite Blueprint</span>
+          <h3>Premium Matrix</h3>
+          <div class="price-matrix">R14,500</div>
+          <p>Enterprise-grade local setup engineered to establish comprehensive market authority.</p>
+          <ul class="list-specs">
+            <li>Everything in the Business Growth Suite</li>
+            <li>Advanced Structural Trust Testimonials</li>
+            <li>Complete Catalog / Interactive Price System</li>
+            <li>Social Footprint Link Mapping</li>
+            <li>3 Architectural Content Review Cycles</li>
+          </ul>
+          <a class="btn alt" style="width:100%; margin-top:24px;" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20the%20Premium%20Matrix%20Package%20for%20R14500">Deploy Premium Matrix</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous Retainer Expansion System -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="headline-bar"></div>
+        <h2>Continuous Optimization Agreements</h2>
+        <p style="color: var(--muted);">Keep your content up to date, accurate, and ahead of your local competition every month.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="panel-card" style="border-color: rgba(245,158,11,0.2);">
+          <h3>Active Asset Upkeep</h3>
+          <div class="price-matrix" style="font-size:32px; color:var(--gold);">R350/mo</div>
+          <p>Quick text updates, keeping your trading hours accurate, and monthly framework validation checks.</p>
+        </div>
+        <div class="panel-card" style="border-color: rgba(245,158,11,0.2);">
+          <h3>Catalog Adjustments</h3>
+          <div class="price-matrix" style="font-size:32px; color:var(--gold);">R750/mo</div>
+          <p>Regular structural changes for seasonal menus, changing services lists, or promotional announcements.</p>
+        </div>
+        <div class="panel-card" style="border-color: rgba(245,158,11,0.2);">
+          <h3>Total Growth System</h3>
+          <div class="price-matrix" style="font-size:32px; color:var(--gold);">R1,500/mo</div>
+          <p>Full site content updates combined with modern layout modifications and localized script enhancements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Viewports Showcase Section -->
+  <section id="portfolio" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="headline-bar"></div>
+        <h2>Interactive Workspace Engine Templates</h2>
+        <p style="color: var(--muted);">Toggle the operational live layout views below to test our responsive design architecture in real time.</p>
+      </div>
+      
+      <div class="demo-selector-tabs">
+        <button class="tab-trigger active" onclick="switchDemoEngine('barber', event)">💈 Barber Blueprint</button>
+        <button class="tab-trigger" onclick="switchDemoEngine('restaurant', event)">🍔 Restaurant Blueprint</button>
+        <button class="tab-trigger" onclick="switchDemoEngine('gym', event)">💪 Fitness Blueprint</button>
+      </div>
+
+      <!-- Barber App Sandbox Workspace Frame -->
+      <div id="barber-demo" class="demo-viewport-box active barber-blueprint">
+        <div class="demo-padding">
+          <div class="demo-banner barber-banner">
+            <h2 style="font-size:32px; color:#fff;">FreshCut Barber Studio</h2>
+            <p style="max-width: 550px; margin: 10px 0 20px; font-size:15px; color:#e5e7eb;">Professional premium grooming. Book your session directly via WhatsApp and walk out looking sharp.</p>
+            <a class="btn" style="background:#fbbf24; color:#000;" href="https://wa.me/27625447930">Schedule Booking</a>
+          </div>
+          <h3 style="margin-bottom:15px;">Signature Services Matrix</h3>
+          <div class="demo-grid">
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80')"></div><h4>Precision Cut</h4><p style="color:#fbbf24; font-weight:700; margin-top:5px;">R80</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=400&q=80')"></div><h4>High Skin Fade</h4><p style="color:#fbbf24; font-weight:700; margin-top:5px;">R120</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80')"></div><h4>Beard Architecture</h4><p style="color:#fbbf24; font-weight:700; margin-top:5px;">R60</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurant App Sandbox Workspace Frame -->
+      <div id="restaurant-demo" class="demo-viewport-box restaurant-blueprint">
+        <div class="demo-padding">
+          <div class="demo-banner restaurant-banner">
+            <h2 style="font-size:32px; color:#fff;">Golden Plate Restaurant</h2>
+            <p style="max-width: 550px; margin: 10px 0 20px; font-size:15px; color:#ffedd5;">A premium local dining layout. Browse our current specials and submit orders directly to our kitchen line.</p>
+            <a class="btn" style="background:#fb923c; color:#fff;" href="https://wa.me/27625447930">Dispatch Kitchen Order</a>
+          </div>
+          <h3 style="margin-bottom:15px;">Curated Menu Selections</h3>
+          <div class="demo-grid">
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80')"></div><h4>Classic Craft Burger</h4><p style="color:#fb923c; font-weight:700; margin-top:5px;">R75</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80')"></div><h4>Flame-Grilled BBQ Meal</h4><p style="color:#fb923c; font-weight:700; margin-top:5px;">R95</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80')"></div><h4>Artisan Woodfired Pizza</h4><p style="color:#fb923c; font-weight:700; margin-top:5px;">R130</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gym App Sandbox Workspace Frame -->
+      <div id="gym-demo" class="demo-viewport-box fitness-blueprint">
+        <div class="demo-padding">
+          <div class="demo-banner fitness-banner">
+            <h2 style="font-size:32px; color:#fff;">IronPulse Fitness</h2>
+            <p style="max-width: 550px; margin: 10px 0 20px; font-size:15px; color:#dcfce7;">Premium local health and conditioning setup. Review accessible tier memberships and secure your pass today.</p>
+            <a class="btn" style="background:#22c55e; color:#000;" href="https://wa.me/27625447930">Activate Membership</a>
+          </div>
+          <h3 style="margin-bottom:15px;">Access Tier Framework</h3>
+          <div class="demo-grid">
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=400&q=80')"></div><h4>Single Day Access Pass</h4><p style="color:#22c55e; font-weight:700; margin-top:5px;">R50</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=400&q=80')"></div><h4>Full Monthly Enrollment</h4><p style="color:#22c55e; font-weight:700; margin-top:5px;">R350</p></div>
+            <div class="demo-card"><div class="demo-media-slot" style="background-image:url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=400&q=80')"></div><h4>1-on-1 Elite Coaching</h4><p style="color:#22c55e; font-weight:700; margin-top:5px;">R150/ses</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project Progress Pipeline Structural Layout -->
+  <section class="section">
+    <div class="wrap split-layout">
+      <div>
+        <h2 style="font-size:34px; color:#fff; margin-bottom:10px;">Symmetric Execution Pipeline</h2>
+        <p style="color:var(--muted); margin-bottom:30px;">Our workflow is built for speed, transparency, and high performance from day one.</p>
+        <div class="process-pipeline">
+          <div class="pipeline-step" data-step="1">
+            <div><h3 style="font-size:17px;">Target Local Audit</h3><p style="font-size:14px; color:var(--muted); margin-top:4px;">We review your existing local web footprint and identify clear ways to improve your lead generation metrics.</p></div>
+          </div>
+          <div class="pipeline-step" data-step="2">
+            <div><h3 style="font-size:17px;">Dynamic Prototyping</h3><p style="font-size:14px; color:var(--muted); margin-top:4px;">We build a live functional sample homepage using your real business information before you make any payment.</p></div>
+          </div>
+          <div class="pipeline-step" data-step="3">
+            <div><h3 style="font-size:17px;">Deployment Lock-In</h3><p style="font-size:14px; color:var(--muted); margin-top:4px;">Once you approve the initial prototype wireframe, we complete the full ecosystem build with a standard 50% deposit.</p></div>
+          </div>
+          <div class="pipeline-step" data-step="4">
+            <div><h3 style="font-size:17px;">Final Launch</h3><p style="font-size:14px; color:var(--muted); margin-top:4px;">Your system goes live, connected cleanly to your WhatsApp number, fully optimized to map customer inquiries.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-card premium-glow" style="align-self: center;">
+        <h3 style="color:#fff;">Prototype Requirements</h3>
+        <p style="font-size:14px; color:var(--muted); margin-top:4px;">To ensure a smooth prototype execution, please have these key baseline details ready for our configuration:</p>
+        <ul class="list-specs" style="margin-bottom:24px;">
+          <li>Registered Brand / Trading Name</li>
+          <li>Accurate Core Menu / Services List</li>
+          <li>Physical Location Coordinates & Operating Hours</li>
+          <li>Target Inbound WhatsApp Contact Number</li>
+          <li>Available High-Resolution Product Media</li>
+        </ul>
+        <a class="btn green" style="width:100%;" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20a%20free%20sample%20homepage.%20My%20business%20name%20is%3A%20">Initiate Free Prototype Build</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Utility Calculation Component Block -->
+  <section class="section">
+    <div class="wrap split-layout">
+      <div class="faq-container">
+        <h2 style="font-size:34px; color:#fff; margin-bottom:20px;">Frequently Addressed Mechanics</h2>
+        <details open>
+          <summary>Is there a financial commitment required before structural reviews?</summary>
+          <p>No. We build a functional home wireframe layout completely upfront. Your deposit is only required after you approve the initial layout's direction.</p>
+        </details>
+        <details>
+          <summary>What is the standard configuration turnaround time?</summary>
+          <p>Standard project setup takes between 24 and 72 hours, depending on how quickly you send over your core business text and photos.</p>
+        </details>
+        <details>
+          <summary>Can custom localized photo assets be integrated?</summary>
+          <p>Yes. Real photos of your business work best. If you don't have them yet, we can use clean high-quality stock placeholders to get you started smoothly.</p>
+        </details>
+      </div>
+
+      <div class="panel-card">
+        <h3 style="color:#fff;">Instant Dispatch Configuration</h3>
+        <p style="font-size:14px; color:var(--muted);">Fill out your project details below to generate an automated estimate link for your WhatsApp chat.</p>
+        <div class="form-group-matrix">
+          <input id="biz" placeholder="Enterprise / Trading Name">
+          <select id="pkg">
+            <option>Basic Architectural Module - R2,500</option>
+            <option>Business Growth Suite - R6,500</option>
+            <option>Premium Matrix Integration - R14,500</option>
+            <option>Custom Architectural Scope</option>
+          </select>
+          <textarea id="details" placeholder="Briefly describe your core services or daily offerings..."></textarea>
+          <button class="btn green" onclick="executeSystemDispatch()">Compile and Send Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Fusion Contact Portal Section -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="portal-cta">
+        <div>
+          <h2>Ready to build a website that captures real customer leads?</h2>
+          <p class="lead" style="margin-top:10px; margin-bottom:28px;">Get in touch with Nexoria AI Technologies today to claim your free sample homepage setup.</p>
+          <a class="btn gold" href="https://wa.me/27625447930?text=Hi%20Jae%2C%20I%20want%20a%20website%20for%20my%20business">Connect with Jae Now</a>
+        </div>
+        
+        <div class="form-wrapper">
+          <h3 style="margin-bottom:16px; color:#fff;">System Coordinates</h3>
+          <p style="font-size:14px; margin-bottom:6px;"><strong>Lead Architect:</strong> Jae</p>
+          <p style="font-size:14px; margin-bottom:6px;"><strong>Hotline Pipeline:</strong> <span style="color:#fff;">062 544 7930</span></p>
+          <p style="font-size:14px; margin-bottom:6px;"><strong>Secure Mail Node:</strong> nexoria@example.com</p>
+          <p style="font-size:14px; margin-bottom:16px;"><strong>Operational Origin:</strong> South Africa</p>
+          <p style="font-size:13px; font-weight:700; color:var(--cyan);">Free Homepage Sample Active</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 Nexoria AI Technologies. High-performance local business landing pages. Hotline: 062 544 7930</div>
+  </footer>
+
+  <script>
+    /* Functional Template Workspace Switching Architecture */
+    function switchDemoEngine(demoName, event) {
+      document.querySelectorAll('.demo-viewport-box').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-trigger').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(`${demoName}-demo`).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    /* Inbound System Route WhatsApp Dispatch Script Engine */
+    function executeSystemDispatch() {
+      const enterpriseName = document.getElementById('biz').value || 'My Local Business';
+      const corePackage = document.getElementById('pkg').value;
+      const explicitDetails = document.getElementById('details').value || 'Requesting digital layout deployment review.';
+      
+      const integratedString = `Hi Jae, I am requesting a website build layout query.%0A%0AEnterprise Profile: ${encodeURIComponent(enterpriseName)}%0ASelected Blueprint: ${encodeURIComponent(corePackage)}%0AScope Context: ${encodeURIComponent(explicitDetails)}`;
+      window.location.href = `https://wa.me/27625447930?text=${integratedString}`;
+    }
+  </script>
+</body>
+</html>
